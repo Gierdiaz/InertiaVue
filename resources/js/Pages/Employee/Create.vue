@@ -3,7 +3,7 @@
         <div class="bg-white shadow-md rounded overflow-hidden">
             <div class="p-4">
                 <h1 class="text-xl font-bold mb-4">Criar Novo Funcionário</h1>
-                <form @submit.prevent="submit">
+                <form @submit.prevent="form.post(`/employees`)">
                     <div class="mb-4">
                         <label for="name" class="block text-gray-700 font-bold mb-2">Nome:</label>
                         <input v-model="form.name" type="text" id="name" class="w-full p-2 border rounded" />
@@ -47,9 +47,5 @@ const form = useForm({
     address: null,
     phone: null
 });
-
-function submit() {
-  router.post('/employees', form)
-}
 
 </script>

@@ -50,8 +50,4 @@ const form = useForm({
     phone: props.employee.phone
 });
 
-// function submit() {
-//   router.put(`/employees/update/${employee.id}`, form)
-// }
-
 </script>

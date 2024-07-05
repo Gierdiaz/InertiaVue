@@ -17,7 +17,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $employees = Employee::query()->orderBy('id', 'asc')->get();
+        $employees = Employee::query()->orderBy('created_at', 'desc')->get();
 
         return Inertia::render('Employee/Index', [
             'employees' => EmployeeResource::collection($employees),
